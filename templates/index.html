@@ -1,0 +1,107 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>Image Classifier</h2>
+
+<div>
+
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+
+
+</div>
+<div class="load" style="display:none;">
+
+            <h1 class="text-center mt-4 mb-4">Suggestions</h1>
+
+
+      <div class="text" style="display:none;">
+          <p>
+              <div class="load" style="display:none;">
+             <img src="\static\insects.jpg" style="width:170px;height:200px;margin-left:15px;">
+            </div>
+            <div class="load">
+              <h2>Insects</h2>
+              <b>Symptoms</b> Small soft bodied insects on underside of leaves and/or stems of plant;
+              usually green or yellow in color, but may be pink, brown, red or black depending on species
+              and host plant; if aphid infestation is heavy it may cause leaves to yellow and/or distorted,
+              necrotic spots on leaves and/or stunted shoots; aphids secrete a sticky, sugary substance
+              called honeydew which encourages the growth of sooty mold on the plants. <br> <b>Management</b>
+               If aphid population is limited to just a few leaves or shoots then the infestation can be pruned
+              out to provide control; check transplants for aphids before planting; use tolerant varieties if
+              available; reflective mulches such as silver colored plastic can deter aphids from feeding on plants;
+              sturdy plants can be sprayed with a strong jet of water to knock aphids from leaves; insecticides
+              are generally only required to treat aphids if the infestation is very high - plants generally
+              tolerate low and medium level infestation; insecticidal soaps or oils such as neem or canola oil
+              are usually the best method of control; always check the labels of the products for specific usage guidelines prior to use.
+          </p>
+                </div>
+          <br>
+          <p>
+             <img src="\static\bacterial.jpg" style="width:170px;height:170px;margin-left:15px;">
+              <h2>Bacterial</h2>
+              <b>Symptoms</b> Water-soaked spots on leaves which are delimited by leaf veins, giving them an
+                angular appearance; lesions increase in size and turn black and necrotic; leaves drop from the
+                plant; disease may also cause elongated gray-black lesions extending from the leaves to petioles
+                and stem which are known as the "blackarm" phase; severe blackarm symptoms may cause the stem to
+                be girdled; water-soaked lesions may be present on bolls; boll lesions enlarge and become sunken
+                and brown-black in color. <br> <b>Management</b>The use of resistant cotton varieties is the most
+                effective method of controlling the disease; cultural practices such as plowing crop residue into
+                soil after harvest can also limit disease emergence.
+          </p>
+          <br>
+          <p>
+             <img src="\static\fusarium wilt.jpg" style="width:170px;height:170px;margin-left:15px;">
+              <h2>Fusarium Wilt</h2>
+              <b>Symptoms</b> Wilting of cotyledons and seedling leaves; cotyledons become chlorotic at the edges
+                and then necrotic; older plants exhibit symptoms of wilting and leaf chlorosis; wilting is usually
+                gradual but may be pronounced after heavy summer rain; if infection is severe plants become stunted
+                and may be killed; vascular system of infected plants becomes discolored and can be seen by cutting
+                the stem.<br> <b>Management</b> Use on certified, disease-free seed; plant varieties with higher
+                resistance to the disease in areas with a history of Fusarium diseases; fumigating the soil may
+                reduce disease incidence.
+          </p>
+          <br>
+          <p>
+             <img src="\static\corynespora.jpg" style="width:170px;height:170px;margin-left:15px;">
+              <h2>Corynespora Cassiicola</h2>
+              <b>Symptoms</b> The symptoms can be found on leaves, boll bracts and on bolls. Initially the
+                appearance of small chocolate brown spots which later enlarge to become circular to irregular
+                spot with target markings. The symptoms are mainly seen in the lower canopy. Typically the
+                infected leaves retain their green color or green yellow color. Under severe conditions leaf
+                and flower drop may occur.<br> <b>Management</b> Use available resistant varieties. Follow crop
+                rotation. Spray suitable fungicide.
+          </p>
+          <br>
+
+
+
+      </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
