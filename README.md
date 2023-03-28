@@ -1,2 +1,2 @@
 # BG1
-DETECTION OF COTTON PLANT DISEASE USING DEEP LEARNING
+Detection Of Cotton Plant Disease using Deep Learning
